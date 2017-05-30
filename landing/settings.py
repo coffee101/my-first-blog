@@ -11,9 +11,14 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Custom settings : we add a new directory named "apps" where all
+# our custom code lives. The following line adds "apps" to the pythonpath
+APPS_DIR = os.path.join(BASE_DIR, 'apps')
+sys.path.append(APPS_DIR)
 
 
 # Quick-start development settings - unsuitable for production
